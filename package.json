@@ -1,0 +1,13 @@
+{
+  "name": "image-viewer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "naoki-tomita <naoki.tomita@jrits.ricoh.co.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "build": "webpack ./scripts/index.js ./dist/[name].js"
+  }
+}

@@ -1,0 +1,23 @@
+<div id="canvas"></div>
+<button id=prev>←</button><button id=next>→</button><br>
+<button id=plus>+</button><button id=minus>-</button><br>
+<button id=rotate>回転</button>
+<script src="../dist/main.js"></script>
+<script>
+  var imageViewer = new window.ImageViewer(
+    "#canvas",
+    500,
+    500,
+    [
+      "https://cdn-ak.f.st-hatena.com/images/fotolife/p/pinsto/20171123/20171123183452.jpg",
+      "https://images.homify.com/c_fill,f_auto,q_auto:eco,w_440/v1441867851/p/photo/image/892647/IMG_3209.jpg",
+      "http://www.tamahome.jp/products/lineup/img/lineup_daianshin_01.jpg"
+    ]
+  );
+  imageViewer.show();
+  document.getElementById("prev").addEventListener("click", function() {imageViewer.prev()});
+  document.getElementById("next").addEventListener("click", function() {imageViewer.next()});
+  document.getElementById("plus").addEventListener("click", function() {imageViewer.expand()});
+  document.getElementById("minus").addEventListener("click", function() {imageViewer.shrink()});
+  document.getElementById("rotate").addEventListener("click", function() {imageViewer.rotate()});
+</script>
